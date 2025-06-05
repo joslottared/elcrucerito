@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Crucerito</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <header>
+    <img src="images/menu.png" alt="Menú" class="menu-icon" onclick="toggleMenu()">
+    <nav id="mobile-menu" class="hidden">
+      <ul>
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#ordenar">Ordenar</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="cotizacion.html">Cotiza</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <p class="subtitulo">tacos al vapor</p>
+      <img src="images/nombre.png" alt="El Crucerito" class="nombre">
+      <img src="images/elcrucerito.png" alt="Logo" class="logo">
+    </div>
+  </section>
+
+  <main>
+    <section id="ordenar">
+      <p class="ordenar">ordena en:</p>
+      <div class="plataformas">
+        <a href="https://c-h5.didi-food.com/es-MX/deeplink?appName=sodaCustomer&path=businessPage&shopId=5764607793890593019&fbclid=PAZXh0bgNhZW0CMTEAAaZRiE5txI1qpqf2vyF0jAUaOpvInuldXsefY_PINoSXfXQCl0SswHzwtrs_aem_HPPDna03p7xkfa38r9jI6Q"
+          target="_blank">
+          <img src="images/didi.png" alt="Didi">
+          <p>didi food</p>
+        </a>
+        <a href="https://rappi.app.link/Tacos_Al_Vapor_el_Crucerito" target="_blank">
+          <img src="images/rappi.png" alt="Rappi">
+          <p>rappi</p>
+        </a>
+        <a href="https://wa.link/6ib4x7" target="_blank">
+          <img src="images/whatsapp.png" alt="WhatsApp">
+          <p>whatsapp</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="ubicacion">
+      <p class="visitanos">visítanos en:</p>
+      <a href="https://maps.app.goo.gl/B6jx7NUjoBi9p8z28?g_st=ic" target="_blank" class="direccion">
+        Puerto México, #3556
+      </a>
+    </section>
+
+    <section id="cotizacion">
+      <a href="cotizacion.html" class="cotizar-btn">cotiza para eventos</a>
+    </section>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobile-menu");
+      menu.classList.toggle("visible");
+    }
+  </script>
+  <footer>
+    <p>&copy; 2025 El Crucerito. Todos los derechos reservados.</p>
+    <p>
+      website by: <img src="/images/merisi (1).png" alt="mersisi" class="merisi">
+
+  </footer>
+</body>
+
+</html>

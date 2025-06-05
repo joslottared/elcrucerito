@@ -1,0 +1,308 @@
+@font-face {
+  font-family: "Hiragino";
+  src: url("fonts/Hiragino Mincho ProN W3.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Hiragino", serif;
+  background: #fff;
+  color: #0a1b2c;
+  text-align: center;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1em;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.menu-icon {
+  width: 30px;
+  cursor: pointer;
+  z-index: 11;
+}
+
+#mobile-menu {
+  position: absolute;
+  top: 3em;
+  left: 1em;
+  background-color: #0a1b2c;
+  border-radius: 5px;
+  padding: 1em;
+  z-index: 10;
+  display: none;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#mobile-menu ul {
+  list-style: none;
+}
+
+#mobile-menu li {
+  margin: 0.5em 0;
+}
+
+#mobile-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#mobile-menu.visible {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#hero {
+  position: relative;
+  background-image: url("images/tacos.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4em;
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@media (min-width: 768px) {
+  #hero {
+    height: 80vh;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(200, 200, 200, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #0a1b2c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4em;
+}
+
+.subtitulo {
+  font-size: 1.2m;
+  letter-spacing: 3pt;
+  margin-bottom: 30px;
+  margin-top: -200px;
+}
+
+.nombre {
+  width: 70%;
+  max-width: 250px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 60%;
+  max-width: 200px;
+}
+
+main {
+  padding: 2em 1em;
+}
+
+.ordenar {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.plataformas {
+  display: flex;
+  justify-content: center;
+  gap: 5em;
+  margin-bottom: 2em;
+  flex-wrap: wrap;
+}
+
+.plataformas a {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.plataformas a:hover {
+  transform: translateY(-5px);
+  filter: brightness(1.2);
+}
+
+.icon-container {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.plataformas img {
+  max-height: 70%;
+  max-width: 70%;
+  object-fit: contain;
+  transition: transform 0.3 ease;
+}
+.plataformas a:hover img {
+  transform: scale(1.1);
+}
+
+.visitanos {
+  font-size: 1.1em;
+  margin-bottom: 0.3em;
+}
+
+.direccion {
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: #1c2e3d;
+  margin-bottom: 2em;
+  text-decoration: none;
+}
+
+.direccion a:hover {
+  text-decoration: underline;
+}
+
+.cotizar-btn {
+  margin-top: 40px;
+  display: inline-block;
+  background-color: #0a1b2c;
+  color: white;
+  padding: 0.8em 2em;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+@media (min-width: 768px) {
+  .nombre {
+    width: 60%;
+    max-width: 400px;
+  }
+  .logo {
+    width: 50%;
+    max-width: 300px;
+  }
+  .subtitulo {
+    font-size: 2em;
+  }
+}
+@media (max-width: 768px) {
+  .plataformas {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .plataformas a {
+    margin-bottom: 1em;
+  }
+
+  .plataformas img {
+    max-width: 70%;
+  }
+}
+
+/* Cotización */
+.cotizacion-container {
+  max-width: 600px;
+  margin: 6em auto 4em auto;
+  padding: 2em;
+  background-color: #ffffffee;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cotizacion-container h1 {
+  font-family: "Hiragino", serif;
+  text-align: center;
+  margin-bottom: 1.5em;
+  color: #0a1b2c;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-family: "Hiragino", serif;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  font-weight: bold;
+  color: #0a1b2c;
+}
+
+input,
+textarea {
+  padding: 0.7em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1em;
+}
+
+button[type="submit"] {
+  margin-top: 2em;
+  background-color: #0a1b2c;
+  color: white;
+  border: none;
+  padding: 0.8em;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button[type="submit"]:hover {
+  background-color: #13314d;
+}
+
+.merisi {
+  width: 10%;
+  max-width: 300px;
+}
